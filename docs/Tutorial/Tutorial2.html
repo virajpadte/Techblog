@@ -109,23 +109,55 @@
 											-->
 										</header>
 										<p>
-										Step 1: Install MySQL on the EC2 instance:</br>
-										This LAMP tutorial comes handy you can just go ahead and install mysql:</br>
-										http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html</br>
+										Step 1: Get all the build essentials:</br>
+										<code>sudo apt-get install build-essential</code>
 										</br>
-										Step 2: Clone the repository:</br>
-										<code>git clone https://github.com/virajpadte/EC2-MySQL-Python.git</code></br>
+										Step 2: Install needed dependencies:
 										</br>
-										Step 3: Install dependencies:</br>
-										<code>pip install -r requirements.txt</code></br>
+										<code>sudo apt-get install libxext-dev libfontconfig1-dev libfreetype6-dev libx11-dev libxcursor-dev libxfixes-dev libxft-dev libxi-dev libxrandr-dev libxrender-dev</code>
 										</br>
-										Step 4: Make changes in the connection string in both db_test_fetch.py and db_test_insert.py</br>
+										Step 3: Download QT from which ever package version you want:</br>
+										<a target="_blank" href="https://download.qt.io/archive/qt/">https://download.qt.io/archive/qt/</a>
 										</br>
-										db server IP, username, password, database name</br>
+										Step 4: Move the .tar.gz file to /tmp </br>
+										<code>sudo cp qt-everywhere-opensource-src-%VERSION%.tar.gz /tmp/</code>
 										</br>
-										Step 5: run the python samples:</br>
-										<code>python db_test_fetch.py</code></br>
-										<code>python db_test_insert.py</code></p>
+
+										Step 5: Uncompress the archive</br>
+										<code>gunzip qt-everywhere-opensource-src-%VERSION%.tar.gz</code>    
+										</br>  
+
+										Step 6: Unpack it</br>
+										<code>tar xvf qt-everywhere-opensource-src-%VERSION%.tar</code>        
+										</br>
+										Step 7: Configure and build the library</br>
+										<code>cd /tmp/qt-everywhere-opensource-src-%VERSION%</code>
+										</br>
+										<code>./configure</code>
+										</br>
+										Step 8: Make and install</br>
+										<code>sudo make install</code>
+										</br>
+										Step 9: Add path:</br>
+										<code>PATH=/usr/local/Trolltech/Qt-4.8.5/bin:$PATH</code>
+										</br>
+										<code>export PATH</code>
+										</br>
+										Step 10: Download qt creator:</br>
+										<a target="_blank" href="https://www.qt.io/download-open-source/">https://www.qt.io/download-open-source/</a>
+										</br>
+										Step 11: Install the qt-creator using the run file</br>
+										<code>chmod +x qt-creator-opensource-linux-x86_64-version.run</code>
+										</br>
+										<code>./qt-creator-opensource-linux-x86_64-version.run</code>
+										</br>
+										Step 12: Configure qt-creator</br>
+										Select Tools > Options > Build & Run > Qt Versions > Add</br>
+										Select /usr/local/Trolltech/Qt-version/bin/qmake</br>
+										<!-- insert scrennshot -->
+										You have now configured qt with your qt-creator
+
+										</p>
 									</div>
 								</div>
 								<!--
