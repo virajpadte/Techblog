@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Tutorial 1: A simple AWS EC2 - MySQL - Python workflow</title>
+		<title>Tutorial 2/title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -22,7 +22,7 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="../images/tut_logo.png" alt="tut_logo" style="width:80px;height:80px;"/></span>
-						<h1>Tutorial 1: A simple AWS EC2 - MySQL - Python workflow</h1>
+						<h1>Tutorial 2: Setting up QT developement environment</h1>
 						<!--<p>Just another free, fully responsive site template<br /> 
 						<br />
 						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>-->
@@ -34,7 +34,7 @@
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<!--<li><a href="#prereq">Prerequisites</a></li>-->
 							<li><a href="#proc">Procedure</a></li>
-							<!--<li><a href="#warn">Warning</a></li>-->
+							<li><a href="#reference">References</a></li>-->
 						</ul>
 					</nav>
 
@@ -48,9 +48,7 @@
 										<header class="major">
 											<h2>Introduction</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>QT is one of the most popular GUI developement framworks out there. I deceided to experiment with it to develope a custom GUI for my laser engraver. Here is a set of instructions needed to get started with setting up a development environment for QT.</p>
 										<!--
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
@@ -109,54 +107,62 @@
 											-->
 										</header>
 										<p>
-										Step 1: Get all the build essentials:</br>
+										 Step 1: Get all the build essentials:</br>
 										<code>sudo apt-get install build-essential</code>
 										</br>
-										Step 2: Install needed dependencies:
+										</br>
+										 Step 2: Install needed dependencies:
 										</br>
 										<code>sudo apt-get install libxext-dev libfontconfig1-dev libfreetype6-dev libx11-dev libxcursor-dev libxfixes-dev libxft-dev libxi-dev libxrandr-dev libxrender-dev</code>
 										</br>
-										Step 3: Download QT from which ever package version you want:</br>
+										</br>
+										 Step 3: Download QT from which ever package version you want:</br>
 										<a target="_blank" href="https://download.qt.io/archive/qt/">https://download.qt.io/archive/qt/</a>
 										</br>
-										Step 4: Move the .tar.gz file to /tmp </br>
+										</br>
+										 Step 4: Move the .tar.gz file to /tmp </br>
 										<code>sudo cp qt-everywhere-opensource-src-%VERSION%.tar.gz /tmp/</code>
 										</br>
-
-										Step 5: Uncompress the archive</br>
+										</br>
+										 Step 5: Uncompress the archive</br>
 										<code>gunzip qt-everywhere-opensource-src-%VERSION%.tar.gz</code>    
 										</br>  
-
-										Step 6: Unpack it</br>
+										</br>
+										 Step 6: Unpack it</br>
 										<code>tar xvf qt-everywhere-opensource-src-%VERSION%.tar</code>        
 										</br>
-										Step 7: Configure and build the library</br>
+										</br>
+										 Step 7: Configure and build the library</br>
 										<code>cd /tmp/qt-everywhere-opensource-src-%VERSION%</code>
 										</br>
 										<code>./configure</code>
 										</br>
-										Step 8: Make and install</br>
+										</br>
+										 Step 8: Make and install</br>
 										<code>sudo make install</code>
 										</br>
-										Step 9: Add path:</br>
+										</br>
+										 Step 9: Add path:</br>
 										<code>PATH=/usr/local/Trolltech/Qt-4.8.5/bin:$PATH</code>
 										</br>
 										<code>export PATH</code>
 										</br>
-										Step 10: Download qt creator:</br>
+										</br>
+										 Step 10: Download qt creator:</br>
 										<a target="_blank" href="https://www.qt.io/download-open-source/">https://www.qt.io/download-open-source/</a>
 										</br>
-										Step 11: Install the qt-creator using the run file</br>
+										</br>
+										 Step 11: Install the qt-creator using the run file</br>
 										<code>chmod +x qt-creator-opensource-linux-x86_64-version.run</code>
 										</br>
 										<code>./qt-creator-opensource-linux-x86_64-version.run</code>
 										</br>
-										Step 12: Configure qt-creator</br>
+										</br>
+										 Step 12: Configure qt-creator</br>
 										Select Tools > Options > Build & Run > Qt Versions > Add</br>
 										Select /usr/local/Trolltech/Qt-version/bin/qmake</br>
 										<!-- insert scrennshot -->
 										You have now configured qt with your qt-creator
-
 										</p>
 									</div>
 								</div>
@@ -192,13 +198,25 @@
 								-->
 							</section>
 
-						<!-- Warnings --><!--
-							<section id="warn" class="main special">
+						<!-- References -->
+							<section id="reference" class="main special">
 								<header class="major">
-									<h2>Warnings</h2>
-									<p>This workflow/ approach is not secure as it is vunerable to DOS, SQL injection etc.<br />
-										Make use of server side php request handler for a more secured approach.<br />
-										-- Words of wisdom by Mayank Ambaliya</p>
+									<h2>References</h2>
+									<p>
+									Qt versions:</br>
+									
+									<a target="_blank" href="https://forum.qt.io/topic/18442/where-i-can-download-older-versions-of-qt-creator">https://forum.qt.io/topic/18442/where-i-can-download-older-versions-of-qt-creator</a>
+									</br></br>
+									Qt official document:</br>
+									<a target="_blank" href="http://doc.qt.io/qt-5/linux-building.html">http://doc.qt.io/qt-5/linux-building.html</a>
+									</br></br>
+									Installing dependencies:</br>
+									<a target="_blank" href="http://doc.qt.io/qt-4.8/requirements-x11.html">http://doc.qt.io/qt-4.8/requirements-x11.html</a>
+									</br></br>
+									Configure Qt creator:</br>
+									<a target="_blank" href="http://doc.qt.io/qtcreator/creator-project-qmake.html">http://doc.qt.io/qtcreator/creator-project-qmake.html</a>
+									</br></br>
+									</p>
 								</header>
 								<footer class="major">
 									<ul class="actions">
